@@ -76,6 +76,7 @@
 	/*background-color: #353534;*/
 	border-top: 2px solid #f09272;
 	margin: 0px;
+	border-bottom: 0px;
 	
 }
 
@@ -128,6 +129,17 @@
     to   { opacity: 1; }
 }
 
+#c_contact_a
+{
+	color: white;
+	background-color: #f09272;
+}
+
+#c_contact_a:hover,
+#c_contact_a .active
+{
+	
+}
 
 #c_carousel_image_1, 
 #c_carousel_image_2, 
