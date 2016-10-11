@@ -13,6 +13,7 @@
 {
 	width: 100%;
 	text-align: center;
+	font-size: 14px;
 }
 
 .c_help_offer_image_container
@@ -41,6 +42,13 @@
 	padding: 20px;
 }
 
+.c_section_content_justfify 
+{
+	text-align: justify;
+	padding: 20px;
+}
+
+
 .c_client_logo_cell
 {
 	padding: 30px;
@@ -53,12 +61,24 @@
 
 .c_company_name
 {
-	font-size: 14px;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .c_hr
 {
 	border-top: 1px solid #3a3a3a;
+}
+
+.shadow 
+{
+
+    -moz-box-shadow:    inset  0  16px 16px -16px #696868, 
+                        inset  0 -16px 16px -16px #696868;
+    -webkit-box-shadow: inset  0  16px 16px -16px #696868, 
+                        inset  0 -16px 16px -16px #696868;
+     box-shadow:        inset  0  16px 16px -16px #696868, 
+                        inset  0 -16px 16px -16px #696868;
 }
 
 /*
