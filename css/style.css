@@ -43,6 +43,11 @@
 	width: 150px;
 }
 
+.c_section_content
+{
+	padding: 20px;	
+}
+
 .c_section_content_center
 {
 	text-align: center;
@@ -231,6 +236,14 @@
 {
 	background-color: #f09272;
 	margin: 0px;
+}
+
+#c_jumbotron_full_width_with_map
+{
+	margin: 0px;
+	padding: 0px;
+	height: 500px;
+	/*pointer-events: none;*/
 }
 
 #c_main_jumbotron_full_width
