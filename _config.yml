@@ -1,7 +1,2 @@
-markdown: kramdown
-baseurl: ""
+baseurl: /Silver-Softworks
 exclude: ['README.md']
-
-gems:
- - jekyll-sitemap
- - jekyll-redirect-from
