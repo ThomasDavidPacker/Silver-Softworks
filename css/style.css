@@ -120,14 +120,7 @@
 }
 */
 
-.c_contact_form
-{
-	background-color: #f09272;
-	border: 1px solid #f09272;
-	padding: 20px;
-	border-radius: 25px;
-	padding: 40px;
-}
+
 
 #c_main_navbar
 {
@@ -386,3 +379,11 @@
 	padding: 20px;
 	border-left: 5px solid #f09272;
 }
+
+/* CONTACT */
+
+.c_contact_form
+{
+	padding: 40px;
+}
+
