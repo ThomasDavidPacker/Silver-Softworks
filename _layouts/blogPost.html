@@ -14,31 +14,43 @@ layout: default
 	</div>-->
 	<div class="c_section_large">
 		<div class="container">
+			<div class="c_blog_post_content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="c_section_content">
+							<h1>{{ page.title }}</h1>
+							<h4>{{ page.author }}</h4>
+							<h5>{{ page.postDate }}</h5>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="c_section_content">
+
+							{{ content }}
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="c_section_content">
+							<h4>Tags</h4>
+							<ul class="list-inline">
+								{% for category in page.categories %}
+									<li><a>{{ category }}</a></li>
+								{% endfor %}
+							</ul>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="jumbotron shadow" id="c_jumbotron_full_width">
+		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="c_section_content">
-						<h1>{{ page.title }}</h1>
-						<h4>{{ page.author }}</h4>
-						<h5>{{ page.postDate }}</h5>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="c_section_content">
-
-						{{ content }}
-
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="c_section_content">
-						<h4>Tags</h4>
-						<ul class="list-inline">
-							{% for category in page.categories %}
-								<li><a>{{ category }}</a></li>
-							{% endfor %}
-						</ul>	
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
