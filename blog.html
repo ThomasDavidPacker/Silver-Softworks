@@ -21,13 +21,35 @@ layout: default
 
 	<div class="c_section_large">
 		<div class="container">
-			<ul class="list-group">
-				{% for post in site.posts %}
-					<li class="list-group-item">
-						<a href="{{ post.url }}">{{ post.title }}</a>
-					</li>
-				{% endfor %}
-			</ul>
+
+			{% for post in site.posts %}
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="c_post_container">
+							<div class="c_post">
+								<div class="c_post_header">
+									<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+									<h4>{{ post.author }}</h4>
+									<h5>{{ post.postDate }}</h5>
+								</div>
+								<div class="c_post_content">
+									{{ post.description }}
+								</div>
+								<div class="c_post_footer">
+									<ul class="list-inline">
+										{% for category in post.categories %}
+											<li><a>{{ category }}</a></li>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			{% endfor %}
+
 		</div>
 	</div>
 

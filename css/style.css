@@ -1,3 +1,8 @@
+.c_silsof_header
+{
+	font-family: QuinchoScript;
+}
+
 .c_section
 {
 	padding: 40px;
@@ -126,6 +131,24 @@
 	padding: 20px;
 	border-radius: 25px;
 	padding: 40px;
+}
+
+.c_post_container
+{
+	padding: 20px;
+	border: 1px solid black;
+}
+
+.c_post
+{
+	padding: 20px;
+	border: 1px solid black;
+}
+
+.c_post_content
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 #c_main_navbar
