@@ -1,7 +1,3 @@
-.c_silsof_header
-{
-	font-family: QuinchoScript;
-}
 
 .c_section
 {
@@ -133,24 +129,6 @@
 	padding: 40px;
 }
 
-.c_post_container
-{
-	padding: 20px;
-	border: 1px solid black;
-}
-
-.c_post
-{
-	padding: 20px;
-	border: 1px solid black;
-}
-
-.c_post_content
-{
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
 #c_main_navbar
 {
 	/*background-color: #353534;*/
@@ -178,11 +156,6 @@
 	-ms-animation: fadein 3s; /* Internet Explorer */
 	-o-animation: fadein 3s; /* Opera < 12.1 */
 	animation: fadein 3s;
-}
-
-.c_text_orange
-{
-	color: #f09272;
 }
 
 @keyframes fadein {
@@ -329,4 +302,67 @@
 #c_copyright
 {
 	text-align: center;
+}
+
+/* SILVER SOFTWORKS MISC */
+
+.c_text_orange
+{
+	color: #f09272;
+}
+
+.c_silver
+{
+	color: #9d9d9c;
+}
+
+.c_dar_grey
+{
+	color: #353534;
+}
+
+.c_silsof_header
+{
+	font-family: QuinchoScript;
+}
+
+.c_header_large
+{
+	font-size: 63px;
+}
+
+.c_address
+{
+	font-weight: 200;
+	font-size: 21px;
+}
+
+/* BLOG */
+
+.c_post_container
+{	
+	padding: 20px;
+}
+
+.c_post
+{
+	padding: 20px;
+	border-left: 5px solid #f09272;
+	
+}
+
+.c_post_header a
+{
+	color: #353534;
+}
+
+.c_post_header a:hover
+{
+	color: black;
+}
+
+.c_post_content
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
