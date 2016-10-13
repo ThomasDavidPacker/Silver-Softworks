@@ -337,6 +337,20 @@
 	font-size: 21px;
 }
 
+/* HEADER */
+
+.navbar .brand 
+{
+	max-height: 40px;
+	overflow: visible;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.navbar a.navbar-brand 
+{
+	padding: 5px 15px 8px; 
+}
+
 /* BLOG */
 
 .c_post_container
