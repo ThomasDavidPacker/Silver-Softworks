@@ -369,5 +369,6 @@
 
 .c_blog_post_content
 {
+	padding: 20px;
 	border-left: 5px solid #f09272;
 }
