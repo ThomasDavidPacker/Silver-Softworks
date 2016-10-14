@@ -44,17 +44,6 @@
 	margin-right: auto;
 }
 
-.c_social_icon_full
-{
-	width: 100%;
-}
-
-.c_social_icon_half
-{
-	width: 50%;
-}
-
-
 .c_content_image_client_logos
 {
 	width: 150px;
@@ -344,6 +333,21 @@ p
 {
 	font-weight: 200;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.c_social_icon_full
+{
+	width: 100%;
+}
+
+.c_social_icon_half
+{
+	width: 50%;
+}
+
+.c_social_icon_quarter
+{
+	width: 25%;	
 }
 
 .c_paragraph_medium
