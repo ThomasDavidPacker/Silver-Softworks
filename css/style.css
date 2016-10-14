@@ -379,6 +379,20 @@ img
 	-ms-user-select: none;
 }
 
+.c_btn_orange 
+{
+	background-color: #f09272; 
+	color: white; 
+	width: 100%;
+}
+
+.c_btn_orange:hover
+{
+	background-color: inherit; 
+	color: inherit; 
+	width: 100%;
+}
+
 /* BLOG */
 
 .c_post_container
