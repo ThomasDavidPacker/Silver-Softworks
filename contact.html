@@ -66,37 +66,45 @@ layout: default
 					<div class="c_section_content">
 						<h2 class="c_silsof_header c_header_medium">Get in touch</h2>
 						<p class="c_paragraph_medium">Understandably, some people prefer it if we get in contact with them.</p>
-						<p>If you're one of these individuals then no worries, we'd love to! Simply fill in our enquiry form and leave the rest up to us.</p>
+						<p>If you're one of these individuals then no worries, we'd love to! Simply fill in our enquiry form and leave the rest to us.</p>
 					</div>
 				</div>
 				<div class="col-md-6">
-					<form class="c_contact_form">
-						<div class="form-group">
-							<label for="firstName">First Name</label>
-							<input type="text" class="form-control" id="firstName" placeholder="Samuel" required>
+					<div id="c_contact_form_container">
+						<form class="c_contact_form" type="post">
+							<div class="form-group">
+								<label for="firstName">First Name</label>
+								<input type="text" class="form-control" id="firstName" placeholder="Samuel" required>
+							</div>
+							<div class="form-group">
+								<label for="lastName">Last Name</label>
+								<input type="text" class="form-control" id="lastName" placeholder="Silver" required>
+							</div>
+							<div class="form-group">
+								<label for="companyName">Company Name</label>
+								<input type="text" class="form-control" id="companyName" placeholder="Silver Softworks" required>
+							</div>
+							<div class="form-group">
+							    <label for="email">Email address</label>
+							    <input type="email" class="form-control" id="email" placeholder="samuel@silversoftworks.com" required>
+				  			</div>
+							<div class="form-group">
+								<label for="contactNumber">Contact Number</label>
+								<input type="text" class="form-control" id="contactNumber" placeholder="01376 318800" required>
+							</div>
+							<div class="form-group">
+								<label for="message">Message</label>
+								<textarea class="form-control" id="message" rows="4" style="resize: none;" placeholder="What's on your mind?"></textarea>
+							</div>
+				  			<button type="submit" class="btn btn-default c_btn_orange" id="c_contact_btn_submit">Submit</button>
+						</form>
+					</div>
+					<div id="c_contact_thank_you_container" style="display: none;">
+						<div class="c_section_content c_fade">
+							<h2 class="c_silsof_header c_header_medium">Thank you!</h2>
+							<p>Your enquiry is extremely important to us. We’ll be in touch with you shortly.</p>
 						</div>
-						<div class="form-group">
-							<label for="lastName">Last Name</label>
-							<input type="text" class="form-control" id="lastName" placeholder="Silver" required>
-						</div>
-						<div class="form-group">
-							<label for="companyName">Company Name</label>
-							<input type="text" class="form-control" id="companyName" placeholder="Silver Softworks" required>
-						</div>
-						<div class="form-group">
-						    <label for="email">Email address</label>
-						    <input type="email" class="form-control" id="email" placeholder="samuel@silversoftworks.com" required>
-			  			</div>
-						<div class="form-group">
-							<label for="contactNumber">Contact Number</label>
-							<input type="text" class="form-control" id="contactNumber" placeholder="01376 318800" required>
-						</div>
-						<div class="form-group">
-							<label for="message">Message</label>
-							<textarea class="form-control" id="message" rows="4" style="resize: none;" placeholder="What's on your mind?"></textarea>
-						</div>
-			  			<button type="submit" class="btn btn-default c_btn_orange">Submit</button>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -118,7 +126,7 @@ layout: default
 				</div>
 				<div class="col-sm-4">
 					<div class="c_help_offer_image_container_borderless">
-						<img src="images/social/icons/128/social-009-round_google.png" class="c_content_image_center c_social_icon_quarter img-responsive">
+						<img src="images/social/icons/128/social-040-round_google_plus.png" class="c_content_image_center c_social_icon_quarter img-responsive">
 					</div>
 				</div>
 				<div class="col-sm-4">
@@ -129,4 +137,24 @@ layout: default
 			</div>
 		</div>		
 	</div>
+	<script>
+		$( "#c_contact_btn_submit" ).click(function() 
+		{
+			var containerHeight = $( "#c_contact_form_container" ).height();
+			$( "#c_contact_form_container" ).hide();
+			$( "#c_contact_thank_you_container" ).show();
+			$( "#c_contact_thank_you_container" ).height(containerHeight);
+    		
+    		var howLongToWait = 5; //number of seconds to wait
+		  	var urlOfDownloadContent = '/documents/Advanced-Administrator-Exam.pdf';
+		 	function triggerDownload()
+		 	{
+		 	 	window.location = urlOfDownloadContent;
+		  	}
+
+		  	setTimeout('triggerDownload()', howLongToWait * 1000);
+			
+		});
+	</script>
+
 </div>
