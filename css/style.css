@@ -271,11 +271,6 @@
 	width: 100%;
 }
 
-#c_customer_success_link
-{
-	color: inherit;
-}
-
 #c_main_footer
 {
 	padding: 20px;
@@ -319,6 +314,11 @@
 	font-family: QuinchoScript;
 }
 
+.c_header_medium
+{
+	font-size: 46px;
+}
+
 .c_header_large
 {
 	font-size: 63px;
@@ -327,6 +327,27 @@
 .c_address
 {
 	font-weight: 200;
+	font-size: 21px;
+}
+
+.c_link
+{
+	color: inherit;
+}
+
+.c_link:hover
+{
+	color: inherit;
+}
+
+p
+{
+	font-weight: 200;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.c_paragraph_medium
+{
 	font-size: 21px;
 }
 
@@ -342,6 +363,16 @@
 .navbar a.navbar-brand 
 {
 	padding: 5px 15px 8px; 
+}
+
+img
+{
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 /* BLOG */
