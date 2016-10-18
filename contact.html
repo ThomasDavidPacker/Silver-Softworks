@@ -103,6 +103,9 @@ layout: default
 						<div class="c_section_content c_fade">
 							<h2 class="c_silsof_header c_header_medium">Thank you!</h2>
 							<p>Your enquiry is extremely important to us. We’ll be in touch with you shortly.</p>
+							<form method="get" action="/documents/Advanced-Administrator-Exam.pdf">
+								<button type="submit" class="btn btn-default c_btn_orange" id="c_contact_btn_submit">Download!</button>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -138,22 +141,11 @@ layout: default
 		</div>		
 	</div>
 	<script>
-		$( "#c_contact_btn_submit" ).click(function() 
-		{
+		$( "#c_contact_btn_submit" ).click(function() {
 			var containerHeight = $( "#c_contact_form_container" ).height();
 			$( "#c_contact_form_container" ).hide();
 			$( "#c_contact_thank_you_container" ).show();
 			$( "#c_contact_thank_you_container" ).height(containerHeight);
-    		
-    		var howLongToWait = 5; //number of seconds to wait
-		  	var urlOfDownloadContent = 'https://thomasdavidpacker.github.io/documents/Advanced-Administrator-Exam.pdf';
-		 	function triggerDownload()
-		 	{
-		 	 	window.location = urlOfDownloadContent;
-		  	}
-
-		  	setTimeout('triggerDownload()', howLongToWait * 1000);
-			
 		});
 	</script>
 
