@@ -329,6 +329,17 @@
 	color: inherit;
 }
 
+.c_link_orange
+{
+	color: #f09272;
+}
+
+.c_link_orange:hover
+{
+	color: #f09272;
+}
+
+
 p
 {
 	font-weight: 200;
