@@ -1,0 +1,78 @@
+	<script>
+
+		/*var hideForm = function()
+		{  
+
+	  		// to hide 
+			var form = document.getElementById('c_contact_form_detail');
+			var containerHeight = $( "#c_contact_form_container" ).height();
+
+	  		form.style.display = 'none';
+			
+			$( "#c_contact_thank_you_container" ).show();
+			$( "#c_contact_thank_you_container" ).height(containerHeight);
+
+		};*/
+
+		$( "#c_contact_btn_submit" ).click(function() 
+		{
+			if (validateForm())
+			{
+				var containerHeight = $( "#c_contact_form_container" ).height();
+				$( "#c_contact_form_container" ).hide();
+				$( "#c_contact_thank_you_container" ).show();
+				$( "#c_contact_thank_you_container" ).height(containerHeight);
+
+				var form = document.getElementById("alert alert-danger");
+				form.submit();
+			}
+		});
+
+		var validateForm = function()
+		{
+			var firstName = document.forms["c_contact_form_detail"]["firstName"].value;
+			var lastName = document.forms["c_contact_form_detail"]["lastName"].value;
+			var companyName = document.forms["c_contact_form_detail"]["companyName"].value;
+			var email = document.forms["c_contact_form_detail"]["email"].value;
+			var contactNumber = document.forms["c_contact_form_detail"]["contactNumber"].value;
+
+			var missingField = document.getElementById("c_missing_field_alert");
+			var error = false;
+
+		    if (firstName == null || firstName == "") 
+		    {
+		        document.forms["c_contact_form_detail"]["firstName"].style.border = "1px solid #F08080";
+		        error = true;
+		    }
+		    if (lastName == null || lastName == "") 
+		    {
+		        document.forms["c_contact_form_detail"]["lastName"].style.border = "1px solid #F08080";
+		        error = true;
+		    }
+		    if (companyName == null || companyName == "")
+		    {
+		    	document.forms["c_contact_form_detail"]["companyName"].style.border = "1px solid #F08080";
+		        error = true;	
+		    }
+		    if (email == null || email == "")
+		    {
+  				document.forms["c_contact_form_detail"]["email"].style.border = "1px solid #F08080";
+		        error = true;	
+		    }
+		    if (contactNumber == null || contactNumber == "")
+		    {
+		    	document.forms["c_contact_form_detail"]["contactNumber"].style.border = "1px solid #F08080";
+		        error = true;	
+		    }
+
+		    if (error)
+		    {
+		    	return false;
+		    }
+		    else
+		    {
+		    	return true;
+		    }
+		}
+
+	</script>
