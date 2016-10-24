@@ -69,33 +69,67 @@ layout: default
 				</div>
 				<div class="col-md-6">
 					<div id="c_contact_form_container">
-						<form class="c_contact_form" id="c_contact_form_detail">
+
+
+						<form class="c_contact_form" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" />
+							<input type=hidden name="oid" value="00D4E0000008w0B">
+							<input type=hidden name="retURL" value="http://www.google.com">
+
 							<div class="form-group" id="f_first_name">
-								<label for="firstName">First Name</label>
-								<input type="text" class="form-control" id="firstName" placeholder="Samuel" required>
+								<label for="first_name">First Name</label>
+								<input id="first_name" maxlength="40" name="first_name" type="text" size="20" class="form-control" placeholder="Samuel" />
 							</div>
+
 							<div class="form-group" id="f_last_name">
-								<label for="lastName">Last Name</label>
-								<input type="text" class="form-control" id="lastName" placeholder="Silver" required>
+								<label for="last_name">Last Name</label>
+								<input id="last_name" maxlength="80" name="last_name" type="text" size="20" class="form-control" placeholder="Silver" />
 							</div>
+
 							<div class="form-group" id="f_company_name">
-								<label for="companyName">Company Name</label>
-								<input type="text" class="form-control" id="companyName" placeholder="Silver Softworks" required>
+								<label for="company">Company Name</label>
+								<input id="company" maxlength="40" name="company" type="text" size="20" class="form-control" placeholder="Silver Softworks" />
 							</div>
+
 							<div class="form-group" id="f_email">
-							    <label for="email">Email address</label>
-							    <input type="email" class="form-control" id="email" placeholder="samuel@silversoftworks.com" required>
-				  			</div>
+								<label for="email">Email address</label>
+								<input id="email" maxlength="80" name="email" type="text" size="20" class="form-control" placeholder="samuel@silversoftworks.com" />
+							</div>
+
 							<div class="form-group"i d="f_contact_number">
-								<label for="contactNumber">Contact Number</label>
-								<input type="text" class="form-control" id="contactNumber" placeholder="01376 318800" required>
+								<label for="phone">Contact Number</label>
+								<input id="phone" maxlength="40" name="phone" type="text" size="20" class="form-control" placeholder="01376 318800" />
 							</div>
+
 							<div class="form-group">
-								<label for="message">Message</label>
-								<textarea class="form-control" id="message" rows="4" style="resize: none;" placeholder="What's on your mind?"></textarea>
+								<label for="description">Description</label>
+								<textarea name="description" class="form-control" rows="4" style="resize: none;" placeholder="What's on your mind?"></textarea>
 							</div>
-				  			<button type="button" class="btn btn-default c_btn_orange" id="c_contact_btn_submit">Submit</button>
+
+							<input type="submit" name="submit" class="btn btn-default c_btn_orange" id="c_contact_btn_submit">
 						</form>
+
+						<form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+							<input type=hidden name="oid" value="00D4E0000008w0B">
+							<input type=hidden name="retURL" value="http://">
+
+							<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+
+							<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+
+							<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+
+							<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+							<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+							<label for="description">Description</label><textarea name="description"></textarea><br>
+
+							<input type="submit" name="submit">
+
+						</form>
+
+
 					</div>
 					<div id="c_contact_thank_you_container" style="display: none;">
 						<div class="c_section_content c_fade">
