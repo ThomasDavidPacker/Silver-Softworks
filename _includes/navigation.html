@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" id="c_main_navbar">
+<nav class="navbar navbar-inverse navbar-fixed-top" id="c_main_navbar">
 	<div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -11,12 +11,28 @@
 	    </div>
 	    <div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-	            <li class="{% if page.url == '/' %} active {% endif %}"><a href="{{site.baseurl}}/">Home</a></li>
-	            <li class="{% if page.url == '/about.html' %} active {% endif %}"><a href="{{site.baseurl}}/about">About</a></li>
-				<li class="{% if page.url == '/services.html' %} active {% endif %}"><a href="{{site.baseurl}}/services">Services</a></li>
+	            <li class="{% if page.url == '/' %}active{% endif %}"><a href="{{site.baseurl}}/">Home</a></li>
+	            <li class="{% if page.url == '/about.html' %}active{% endif %}"><a href="{{site.baseurl}}/about">About</a></li>
+
+
+
+				<!--<li class="{% if page.url == '/services.html' %}active{% endif %}"><a href="{{site.baseurl}}/services">Services</a></li>-->
+				<li class="dropdown {% if page.url == '/services.html' or page.url == '/sales_cloud_quick_start.html' or page.url == '/pardot_quick_start.html' %}active{% endif %}">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+
+					<ul class="dropdown-menu">
+						<li><a href="/services">Strategic Consulting</a></li>
+						<li><a href="/services">Implementation</a></li>
+						<li><a href="/services">Support</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="/sales_cloud_quick_start">Sales Cloud Quick Start</a></li>
+						<li><a href="/pardot_quick_start">Pardot Quick Start</a></li>
+					</ul>
+			    </li>
+
 				<!--<li class="{% if page.url == '/success-stories.html' %} active {% endif %}"><a href="{{site.baseurl}}/success-stories">Success Stories</a></li>-->
-				<li class="{% if page.url == '/blog.html' %} active {% endif %}"><a href="{{site.baseurl}}/blog">Blog</a></li>
-	            <li class="{% if page.url == '/contact.html' %} active {% endif %}" id="c_contact_li"><a id="c_contact_a" href="{{site.baseurl}}/contact">Contact</a></li>
+				<li class="{% if page.url == '/blog.html' %}active{% endif %}"><a href="{{site.baseurl}}/blog">Blog</a></li>
+	            <li class="{% if page.url == '/contact.html' %}active{% endif %}" id="c_contact_li"><a id="c_contact_a" href="{{site.baseurl}}/contact">Contact</a></li>
 	        </ul>
 		</div><!--/.nav-collapse -->
 	</div>
