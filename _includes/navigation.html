@@ -15,15 +15,15 @@
 	            <li class="{% if page.url == '/about.html' %}active{% endif %}"><a href="{{site.baseurl}}/about">About</a></li>
 
 				<!--<li class="{% if page.url == '/services.html' %}active{% endif %}"><a href="{{site.baseurl}}/services">Services</a></li>-->
-				<li class="dropdown {% if page.url == '/services.html' or page.url == '/sales_cloud_quick_start.html' or page.url == '/pardot_quick_start.html' %}active{% endif %}">
+				<li class="dropdown {% if page.url == '/strategic_consulting.html' or page.url == '/implementations.html' or page.url == '/support.html' or page.url == '/sales_cloud_quick_start.html' or page.url == '/pardot_quick_start.html' %}active{% endif %}">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
 
 					<ul class="dropdown-menu">
-						<li><a class="c_sub_item" href="/services">Strategic Consulting</a></li>
-						<li><a class="c_sub_item" href="/services">Implementation</a></li>
-						<li><a class="c_sub_item" href="/services">Support</a></li>
-						<li><a class="c_sub_item" href="/sales_cloud_quick_start">Sales Cloud Quick Start</a></li>
-						<li><a class="c_sub_item" href="/pardot_quick_start">Pardot Quick Start</a></li>
+						<li><a class="c_sub_item {% if page.url == '/strategic_consulting.html' %}c_sub_item_active{% endif %}" href="/strategic_consulting">Strategic Consulting</a></li>
+						<li><a class="c_sub_item {% if page.url == '/implementations.html' %}c_sub_item_active{% endif %}" href="/implementations">Implementation</a></li>
+						<li><a class="c_sub_item {% if page.url == '/support.html' %}c_sub_item_active{% endif %}" href="/support">Support</a></li>
+						<li><a class="c_sub_item {% if page.url == '/sales_cloud_quick_start.html' %}c_sub_item_active{% endif %}" href="/sales_cloud_quick_start">Sales Cloud Quick Start</a></li>
+						<li><a class="c_sub_item {% if page.url == '/pardot_quick_start.html' %}c_sub_item_active{% endif %}" href="/pardot_quick_start">Pardot Quick Start</a></li>
 					</ul>
 			    </li>
 
@@ -34,3 +34,4 @@
 		</div><!--/.nav-collapse -->
 	</div>
 </nav>
+

@@ -13,7 +13,7 @@
 .c_sub_item
 {
 	background-color: #fff !important;
-	color: black !important;
+	color: #777 !important;
 }
 
 .c_sub_item:hover
@@ -22,11 +22,16 @@
 	color: white !important;
 }
 
+.c_sub_item_active
+{
+	background-color: #e7e7e7 !important;
+	color: #555;
+}
+
 .dropdown-menu li a
 {
 	padding: 15px;
 }
-
 
 #navbar ul .active a {
     background-color: #f09272 ;
