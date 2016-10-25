@@ -50,7 +50,11 @@ layout: default
 				<div class="col-md-6">
 					<div id="c_contact_form_container">
 						<iframe id="c_handle" name="c_handle" style="display:none;" src="about:blank"></iframe>
-						<form class="c_contact_form" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" target="c_handle"/>
+						
+						<form class="c_contact_form" id="c_contact_form_detail" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" target="c_handle"/>
+							<div class="c_contact_error c_fade">
+								<p id="c_error_message"></p>
+							</div>
 							<input type=hidden name="oid" value="00D4E0000008w0B">
 							<input type=hidden name="retURL" value="#">
 
@@ -86,7 +90,7 @@ layout: default
 								<textarea name="description" class="form-control" rows="4" style="resize: none;" placeholder="What's on your mind?"></textarea>
 							</div>
 
-							<input type="submit" name="submit" class="btn btn-default c_btn_orange" id="c_contact_btn_submit">
+							<input type="button" value="Submit" name="submit" class="btn btn-default c_btn_orange" id="c_contact_btn_submit">
 						</form>
 					</div>
 					<div id="c_contact_thank_you_container" style="display: none;">
@@ -144,14 +148,93 @@ layout: default
 
 		$( "#c_contact_btn_submit" ).click(function() 
 		{
-			var containerHeight = $( "#c_contact_form_container" ).height();
-			$( "#c_contact_form_container" ).hide();
-			$( "#c_contact_thank_you_container" ).show();
-			$( "#c_contact_thank_you_container" ).height(containerHeight);
+			
+			if (validateForm())
+			{
+				var containerHeight = $( "#c_contact_form_container" ).height();
+				$( "#c_contact_form_container" ).hide();
+				$( "#c_contact_thank_you_container" ).show();
+				$( "#c_contact_thank_you_container" ).height(containerHeight);
 
-			var form = document.getElementById("alert alert-danger");
-			form.submit();	
+				var form = document.getElementById("alert alert-danger");
+				form.submit();	
+			}
 		});
+
+		function validateForm()
+		{
+			
+			var firstName = document.getElementById("first_name");
+			var lastName = document.getElementById("last_name");
+			var companyName = document.getElementById("company");
+			var email = document.getElementById("email");
+			var contactNumber = document.getElementById("phone");
+
+			var reqForm = document.getElementById("c_contact_form_detail");
+
+			var errorMessage = document.getElementById("c_error_message");
+			var error = false;
+
+			var missingFields = [];
+
+
+		    if (firstName.value == null || firstName.value == "") 
+		    {
+		        firstName.style.border = "1px solid #f09272";
+		        missingFields.push("First Name");
+		        error = true;
+		    }
+		    if (lastName.value == null || lastName.value == "") 
+		    {
+		        lastName.style.border = "1px solid #f09272";
+		        missingFields.push("Last Name");
+		        error = true;
+		    }
+		    if (companyName.value == null || companyName.value == "")
+		    {
+		    	companyName.style.border = "1px solid #f09272";
+		    	missingFields.push("Company Name");
+		        error = true;	
+		    }
+		    if (email.value == null || email.value == "")
+		    {
+  				email.style.border = "1px solid #f09272";
+  				missingFields.push("Email");
+		        error = true;	
+		    }
+		    if (contactNumber.value== null || contactNumber.value == "")
+		    {
+		    	contactNumber.style.border = "1px solid #f09272";
+		    	missingFields.push("Contact Number");
+		        error = true;	
+		    }
+
+		    if (missingFields.length > 0)
+		    {
+		    	var errMsg = "<p>Please complete  the following fields</p><ul class='c_text_orange' style='list-style:square;'>";
+
+		    	for (var i = 0; i < missingFields.length; i++)
+		    	{
+		    		errMsg += "<li>" + missingFields[i] + "</li>";
+		    	}
+
+		    	errMsg += "</ul><br>";
+		    	errorMessage.innerHTML = errMsg;
+		    }
+		    else
+		    {
+		    	errorMessage.innerHTML = "";
+		    }
+
+		    if (error)
+		    {
+		    	return false;
+		    }
+		    else
+		    {
+		    	return true;
+		    }
+		}
 
 	</script>
 
