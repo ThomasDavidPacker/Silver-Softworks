@@ -91,7 +91,7 @@ layout: default
 						<div class="c_section_content c_fade">
 							<h2 class="c_silsof_header c_header_medium">Thank you!</h2>
 							<p>Your enquiry is extremely important to us and we will be in touch with you shortly!</p>
-							<a href="/documents/Silver_Softworks_Sales_Cloud_2_Day_Quick_Start_Package.pdf" target="_blank">/documents/Silver_Softworks_Sales_Cloud_2_Day_Quick_Start_Package.pdf</a>
+							<p><a href="/documents/Silver_Softworks_Sales_Cloud_2_Day_Quick_Start_Package.pdf" target="_blank" class="c_text_orange">Click here</a> to download our Sales Cloud Quick Start guide.</p>
 						</div>
 					</div>
 				</div>
@@ -110,15 +110,16 @@ layout: default
 			
 			if (validateForm())
 			{
+
 				var containerHeight = $( "#c_contact_form_container" ).height();
 				$( "#c_contact_form_container" ).hide();
 				$( "#c_contact_thank_you_container" ).show();
 				$( "#c_contact_thank_you_container" ).height(containerHeight);
 
 				var form = document.getElementById("c_contact_form_detail");
-				form.submit();	
+				window.location='/sales_cloud_quick_start#c_contact_form_container';
 
-				window.open("", '_blank');
+				form.submit();	
 			}
 		});
 
