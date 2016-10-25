@@ -4,21 +4,38 @@
 	border-top: 0px;
 }
 
+.c_sub_item
+{
+	background-color: #fff !important;
+	color: black !important;
+}
+
+.c_sub_item
+{
+	background-color: #fff !important;
+	color: black !important;
+}
+
+.c_sub_item:hover
+{
+	background-color: #f09272 !important;
+	color: white !important;
+}
+
 .dropdown-menu li a
 {
 	padding: 15px;
 }
 
-.dropdown-menu li a:hover
-{
-	background-color: #f09272;
-	color: white;
-}
 
+#navbar ul .active a {
+    background-color: #f09272 ;
+    color: white;
+}
 
 #c_main_navbar
 {
-	background-color: #353534;
+	background-color: #fff;
 }
 
 .shadow_full
