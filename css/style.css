@@ -1,4 +1,14 @@
-.dropdown-menu 
+#c_jumbotron_full_width_white
+{
+	background-color: white;
+}
+
+#c_jumbotron_full_width_white p 
+{
+	font-size: 16px;
+}
+
+ .dropdown-menu 
 {
 	padding: 0px;
 	border-top: 0px;
