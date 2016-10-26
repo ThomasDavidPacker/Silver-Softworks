@@ -121,10 +121,12 @@ layout: default
 				$( "#c_contact_form_container" ).hide();
 				$( "#c_contact_thank_you_container" ).show();
 				$( "#c_contact_thank_you_container" ).height(containerHeight);
+	
+				$('html, body').animate({
+				    scrollTop: ($('#c_jumbotron_full_width').first().offset().top - 75)
+				}, 500);
 
 				var form = document.getElementById("c_contact_form_detail");
-				window.location='/sales_cloud_quick_start#c_contact_form_container';
-
 				form.submit();	
 			}
 		});
