@@ -481,6 +481,7 @@ img
 .c_btn_orange 
 {
 	background-color: #f09272; 
+	border: 1px solid #f09272;
 	color: white; 
 	width: 100%;
 }
@@ -489,6 +490,7 @@ img
 {
 	background-color: inherit; 
 	color: inherit; 
+	border: 1px solid #f09272;
 }
 
 .c_btn_small
