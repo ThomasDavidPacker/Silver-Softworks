@@ -394,7 +394,7 @@
 
 .c_header_large
 {
-	font-size: 63px;
+	font-size: 53px;
 }
 
 .c_address
@@ -506,8 +506,7 @@ img
 .c_post
 {
 	padding: 20px;
-	border-left: 5px solid #f09272;
-	
+	border-left: 5px solid #f09272;	
 }
 
 .c_post_header a
