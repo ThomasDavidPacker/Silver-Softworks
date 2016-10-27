@@ -389,12 +389,12 @@
 
 .c_header_medium
 {
-	font-size: 46px;
+	font-size: 40px !important;
 }
 
 .c_header_large
 {
-	font-size: 53px;
+	font-size: 45px !important; 
 }
 
 .c_address
