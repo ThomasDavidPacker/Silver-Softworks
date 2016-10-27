@@ -299,7 +299,8 @@
 
 #c_carousel_image_5
 {
-	background: url('../images/pexels-photo.jpg') no-repeat center center;
+	background: url('../images/pexels-photo.jpeg') no-repeat center 60%;
+	color: white;
 }
 
 #c_carousel_image_6
