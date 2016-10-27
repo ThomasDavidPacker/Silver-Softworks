@@ -488,7 +488,11 @@ img
 {
 	background-color: inherit; 
 	color: inherit; 
-	width: 100%;
+}
+
+.c_btn_small
+{
+	width: 150px;
 }
 
 /* BLOG */
