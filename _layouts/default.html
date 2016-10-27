@@ -14,9 +14,6 @@
 
 	    <!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	
-		<!-- jQuery library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -107,11 +104,21 @@
 				</div>
 			</div>
 		</footer>
-		
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	    <!-- Include all compiled plugins (below), or include individual files as needed
-	    <script src="/js/bootstrap.min.js"></script>-->
-
 	</body>
+
+	<script type="text/javascript">
+		function downloadJSAtOnload() {
+		var element = document.createElement("script");
+		element.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js";
+		document.body.appendChild(element);
+		}
+		if (window.addEventListener)
+		window.addEventListener("load", downloadJSAtOnload, false);
+		else if (window.attachEvent)
+		window.attachEvent("onload", downloadJSAtOnload);
+		else window.onload = downloadJSAtOnload;
+	</script>
+
+	<!-- jQuery library 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 </html
