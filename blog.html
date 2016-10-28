@@ -33,7 +33,7 @@ layout: default
 				
 					<div class="col-md-4">
 						<div class="c_section_content">
-							<a href="{{ post.url }}">
+							
 								<div class="c_post_tile">
 									{% if post.tile == null %}
 										<div class="c_post_letter">
@@ -41,11 +41,11 @@ layout: default
 										</div>
 									{% else %}
 										<div class="c_post_image">
-											<img src="{{ post.tile }}">
+											<a href="{{ post.url }}"><img src="{{ post.tile }}"></a>
 										</div>	
 									{% endif %}
 								</div>
-							</a>
+							
 
 							<div class="c_post">
 								
