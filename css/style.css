@@ -538,7 +538,7 @@ img
 
 .c_post_tile
 {	
-	height: 280px;
+	
 	background-color: #f09272;
 }
 
@@ -548,6 +548,7 @@ img
 	text-align: center;
 	font-size: 128px;
 	color: white;
+	height: 280px;
 }
 
 .c_post_image
