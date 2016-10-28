@@ -533,17 +533,18 @@ img
 	padding: 20px;
 	text-align: center;
 	background-color: white;
+	max-width: 320px;
 }
 
 .c_post_tile
 {	
-	height: 320px;
+	height: 280px;
 	background-color: #f09272;
 }
 
 .c_post_letter
 {
-	padding-top: 70px;
+	padding-top: 50px;
 	text-align: center;
 	font-size: 128px;
 	color: white;
