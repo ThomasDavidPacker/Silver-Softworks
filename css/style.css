@@ -552,6 +552,15 @@ img
 	height: 280px;
 }
 
+.c_blog_post_letter
+{
+	text-align: center;
+	font-size: 128px;
+	padding: 35px;
+	color: white;
+	background-color: #f09272;
+}
+
 .c_post_image
 {
 
@@ -576,7 +585,28 @@ img
 .c_blog_post_content
 {
 	padding: 20px;
-	border-left: 5px solid #f09272;
+}
+
+.c_blog_banner
+{
+	background-color: #f09272; 
+}
+
+.c_blog_post_container
+{
+	margin-top: 30px;
+}
+
+.c_post_col_left
+{
+	background-color: white;
+	padding: 20px;	
+}
+
+.c_post_col_right
+{
+	background-color: white;	
+	padding: 20px;	
 }
 
 .c_post_tile a:hover

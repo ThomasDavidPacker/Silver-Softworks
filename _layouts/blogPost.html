@@ -3,50 +3,61 @@ layout: default
 ---
 
 <div id="main-content">
-	<!--<div class="c_section_large">
-		<div class="container c_section_content_center">	
-			<div class="row">
-				<div class="col-md-12">
-					<h1 class="c_fade c_silsof_header">{{page.title}}</h1>
-				</div>
-			</div>
-		</div>
-	</div>-->
-	<div class="c_section_large">
+	<div class="jumbotron" id="c_jumbotron_full_width_white"></div>
+
+	<div class="jumbotron shadow" id="c_jumbotron_full_width">
 		<div class="container">
 			<div class="c_blog_post_content">
 				<div class="row">
-					<div class="col-md-12">
-						<div class="c_section_content">
-							<h1>{{ page.title }}</h1>
-							<h4>{{ page.author }}</h4>
-							<h5>{{ page.postDate }}</h5>
+					<div class="c_blog_banner">
+						<div class="col-md-12">
+							{% if page.banner == null %}
+								<div class="c_blog_post_letter">
+									{{ page.letter}}
+								</div>
+							{% else %}
+								<div class="c_post_image">
+									<a href="{{ page.url }}"><img src="{{ page.tile }}" class="img-responsive"></a>
+								</div>	
+							{% endif %}
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-12">
-						<div class="c_section_content">
+					<div class="c_blog_post_container">
+						<div class="col-md-8">
+							<div class="c_post_col_left">
+								<div class="c_section_content">
+									<h1 class="c_header_large">{{ page.title }}</h1>
+									<h4>{{ page.author }}</h4>
+									<h5>{{ page.postDate }}</h5>
+								</div>
+								<div class="c_section_content">
 
-							{{ content }}
+									{{ content }}
 
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="c_section_content">
-							<h4>Tags</h4>
-							<ul class="list-inline">
-								{% for category in page.categories %}
-									<li><a>{{ category }}</a></li>
-								{% endfor %}
-							</ul>	
+						<div class="col-md-4">
+							<div class="c_post_col_right">
+								<div class="c_section_content">
+									<h4>Tags</h4>
+									<ul>
+										{% for category in page.categories %}
+											<li><a>{{ category }}</a></li>
+										{% endfor %}
+									</ul>	
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<div class="jumbotron" id="c_jumbotron_full_width_white"></div>
+
 </div>
 
