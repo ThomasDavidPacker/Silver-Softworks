@@ -565,6 +565,11 @@ img
 	border-left: 5px solid #f09272;
 }
 
+.c_post_tile a:hover
+{
+	text-decoration: none;
+}
+
 /* CONTACT */
 
 .c_contact_form

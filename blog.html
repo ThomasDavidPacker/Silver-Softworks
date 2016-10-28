@@ -36,9 +36,9 @@ layout: default
 							
 								<div class="c_post_tile">
 									{% if post.tile == null %}
-										<div class="c_post_letter">
+										<a href="{{ post.url }}"><div class="c_post_letter">
 											{{ post.letter}}
-										</div>
+										</div></a>
 									{% else %}
 										<div class="c_post_image">
 											<a href="{{ post.url }}"><img src="{{ post.tile }}"></a>
