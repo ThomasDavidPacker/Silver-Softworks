@@ -20,23 +20,46 @@ layout: default
 
 	<div class="jumbotron shadow" id="c_jumbotron_full_width">
 		<div class="container">
+			{% assign i = '0' %}
+			{% assign openDiv = false %}
 
 			{% for post in site.posts %}
 
-				<div class="row">
-					<div class="col-md-12">
+				{% if i == '0' %}
+					<div class="row">
+					{% assign openDiv = true %}
+				{% endif %}
+				
+				
+					<div class="col-md-4">
 						<div class="c_section_content">
+							<a href="{{ post.url }}">
+								<div class="c_post_tile">
+									{% if post.tile == null %}
+										<div class="c_post_letter">
+											{{ post.letter}}
+										</div>
+									{% else %}
+										<div class="c_post_image">
+											<img src="{{ post.tile }}">
+										</div>	
+									{% endif %}
+								</div>
+							</a>
+
 							<div class="c_post">
+								
 								<div class="c_post_header">
-									<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-									<h4>{{ post.author }}</h4>
-									<h5>{{ post.postDate }}</h5>
+									<h1 class="c_header_small"><a href="{{ post.url }}">{{ post.title }}</a></h1>
 								</div>
 								<div class="c_post_content">
-									<p>{{ post.description }}</p> <br><br>
-									<a href="{{ post.url }}"> Read post</a>
+									<p class="c_paragraph_small">{{ i }}</p> 
+									<!--<h4>{{ post.author }}</h4>-->
+									<h5>{{ post.postDate }}</h5><br>
+									<a href="{{ post.url }}" class="btn btn-default c_btn_orange c_btn_small"> Read post</a>
 								</div>
 								<div class="c_post_footer">
+
 									<h5>Tags</h5>
 									<ul class="list-inline">
 										{% for category in post.categories %}
@@ -47,9 +70,20 @@ layout: default
 							</div>
 						</div>
 					</div>
-				</div>
+
+				{% if i == '2' %}
+					</div>
+					{% assign i = '0' %}
+					{% assign openDiv = false %}
+				{% else %}
+					{% capture i %}{{ i | plus: '1' }}{% endcapture %}
+				{% endif %}
 
 			{% endfor %}
+
+			{% if openDiv == true %}
+				</div>
+			{% endif %}
 
 		</div>
 	</div>
