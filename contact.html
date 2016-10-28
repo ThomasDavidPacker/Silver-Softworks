@@ -62,22 +62,22 @@ layout: default
 								<input type=hidden name="lea5" value="Web">
 
 								<div class="form-group" id="f_first_name">
-									<label for="first_name">First Name</label>
+									<label for="first_name">First Name <span class="c_text_orange">*</span></label>
 									<input id="first_name" maxlength="40" name="first_name" type="text" size="20" class="form-control" placeholder="Samuel" />
 								</div>
 
 								<div class="form-group" id="f_last_name">
-									<label for="last_name">Last Name</label>
+									<label for="last_name">Last Name <span class="c_text_orange">*</span></label>
 									<input id="last_name" maxlength="80" name="last_name" type="text" size="20" class="form-control" placeholder="Silver" />
 								</div>
 
 								<div class="form-group" id="f_company_name">
-									<label for="company">Company Name</label>
+									<label for="company">Company Name <span class="c_text_orange">*</span></label>
 									<input id="company" maxlength="40" name="company" type="text" size="20" class="form-control" placeholder="Silver Softworks" />
 								</div>
 
 								<div class="form-group" id="f_email">
-									<label for="email">Email address</label>
+									<label for="email">Email address <span class="c_text_orange">*</span></label>
 									<input id="email" maxlength="80" name="email" type="text" size="20" class="form-control" placeholder="samuel@silversoftworks.com" />
 								</div>
 
@@ -174,7 +174,6 @@ layout: default
 			var lastName = document.getElementById("last_name");
 			var companyName = document.getElementById("company");
 			var email = document.getElementById("email");
-			var contactNumber = document.getElementById("phone");
 
 			var reqForm = document.getElementById("c_contact_form_detail");
 
@@ -223,16 +222,6 @@ layout: default
 		    else
 		    {
 		    	email.style.border = "1px solid #CCC";	
-		    }
-		    if (contactNumber.value== null || contactNumber.value == "")
-		    {
-		    	contactNumber.style.border = "1px solid #f09272";
-		    	missingFields.push("Contact Number");
-		        error = true;	
-		    }
-			else
-		    {
-		    	contactNumber.style.border = "1px solid #CCC";	
 		    }
 		    if (missingFields.length > 0)
 		    {
