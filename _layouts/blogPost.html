@@ -50,40 +50,39 @@ layout: default
 						<div class="col-md-4">
 							<div class="c_post_col_right">
 								{% for post in site.posts limit:1 %}
-						
-										<div class="c_post" style="margin-bottom: 30px;">
+									<div class="c_post" style="margin-bottom: 30px;">
 
-											<div class="c_post_tile">
-												{% if post.tile == null %}
-													<a href="{{ post.url }}" class="noselect"><div class="c_post_letter">
-														{{ post.letter}}
-													</div></a>
-												{% else %}
-													<div class="c_post_image">
-														<a href="{{ post.url }}"><img src="{{ post.tile }}" class="img-responsive"></a>
-													</div>	
-												{% endif %}
-											</div>
-											
-											<div class="c_post_header">
-												<h1 class="c_header_small">{{ post.title }}</h1>
-											</div>
-											<div class="c_post_content">
-												<p class="c_paragraph_small">{{ post.description }}</p> 
-												<h5>{{ post.postDate }}</h5><br>
-												<a href="{{ post.url }}" class="btn btn-default c_btn_orange c_btn_small"> Read post</a>
-											</div>
-											<div class="c_post_footer">
-
-												<h5>Tags</h5>
-												<ul class="list-inline">
-													{% for category in post.categories %}
-														<li><a>{{ category }}</a></li>
-													{% endfor %}
-												</ul>
-											</div>
+										<div class="c_post_tile">
+											{% if post.tile == null %}
+												<a href="{{ post.url }}" class="noselect"><div class="c_post_letter">
+													{{ post.letter}}
+												</div></a>
+											{% else %}
+												<div class="c_post_image">
+													<a href="{{ post.url }}"><img src="{{ post.tile }}" class="img-responsive"></a>
+												</div>	
+											{% endif %}
 										</div>
-									{% endfor %}
+										
+										<div class="c_post_header">
+											<h1 class="c_header_small">{{ post.title }}</h1>
+										</div>
+										<div class="c_post_content">
+											<p class="c_paragraph_small">{{ post.description }}</p> 
+											<h5>{{ post.postDate }}</h5><br>
+											<a href="{{ post.url }}" class="btn btn-default c_btn_orange c_btn_small"> Read post</a>
+										</div>
+										<div class="c_post_footer">
+
+											<h5>Tags</h5>
+											<ul class="list-inline">
+												{% for category in post.categories %}
+													<li><a>{{ category }}</a></li>
+												{% endfor %}
+											</ul>
+										</div>
+									</div>
+								{% endfor %}
 							</div>
 						</div>
 					</div>
