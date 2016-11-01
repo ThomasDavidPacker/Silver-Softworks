@@ -306,35 +306,35 @@
 
 #c_carousel_image_1
 {
-	background: url('../images/photo-1474635183442-1d29a9be83d3.jpeg') no-repeat center 40%;
+	background: url('../images/photo-1474635183442-1d29a9be83d3.jpeg') no-repeat center;
 	color: white;
 }
 
 #c_carousel_image_2
 {
-	background: url('../images/photo-1468930605463-659a967fc4e8.jpeg') no-repeat center 86.5%;
+	background: url('../images/photo-1468930605463-659a967fc4e8.jpeg') no-repeat center;
 }
 
 #c_carousel_image_3
 {
-	background: url('../images/photo-1421757295538-9c80958e75b0.jpeg') no-repeat center 51%;
-	color: white;
+	background: url('../images/photo-1421757295538-9c80958e75b0.jpeg') no-repeat center;
+
 }
 
 #c_carousel_image_4
 {
-	/*background: url('../images/placeholder-red.png') no-repeat center 20%;*/
+	background: url('../images/laptop_pen.jpg') no-repeat center 20%;
 }
 
 #c_carousel_image_5
 {
-	background: url('../images/pexels-photo.jpeg') no-repeat center 60%;
+	background: url('../images/pexels-photo.jpeg') no-repeat center;
 	color: white;
 }
 
 #c_carousel_image_6
 {
-	background: url('../images/photo-1429030150151-548690082f0b.jpeg') no-repeat center 25%;
+	background: url('../images/photo-1429030150151-548690082f0b.jpeg') no-repeat center;
 }
 
 #c_jumbotron_full_width

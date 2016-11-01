@@ -28,6 +28,7 @@ layout: default
 						<div class="col-md-8">
 							<div class="c_post_col_left">
 								<div class="c_section_content">
+									<a href="/blog" class="c_link_orange">Blog</a><span > > </span><span>{{ page.title }}</span>
 									<h1 class="c_header_large">{{ page.title }}</h1>
 									<h4>{{ page.author }}</h4>
 									<h5>{{ page.postDate }}</h5>
@@ -43,7 +44,10 @@ layout: default
 										{% for category in page.categories %}
 											<li><a>{{ category }}</a></li>
 										{% endfor %}
-									</ul>	
+									</ul>
+								</div>
+								<div class="c_section_content_center">
+									<button class="btn btn-default c_btn_orange c_btn_small" onclick="goBack()">Back</button>
 								</div>
 							</div>
 						</div>
@@ -94,4 +98,10 @@ layout: default
 	<div class="jumbotron" id="c_jumbotron_full_width_white"></div>
 
 </div>
+
+<script>
+	function goBack() {
+	    window.history.back();
+	}
+</script>
 
